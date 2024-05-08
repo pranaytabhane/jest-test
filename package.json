@@ -1,0 +1,24 @@
+{
+  "name": "jesttest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node http/server.js",
+    "test": "jest",
+    "test:fetchdata": "jest --testPathPattern=test/fetchdata.test.js",
+    "test:login": "jest --detectOpenHandles --testPathPattern=test/login.test.js",
+    "test:execution-cycle": "jest --detectOpenHandles --testPathPattern=test/execution-cycle.test.js",
+    "test:lifecycle": "jest --detectOpenHandles --testPathPattern=test/lifecycle.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "supertest": "^7.0.0"
+  }
+}
