@@ -1,7 +1,11 @@
 const request = require('supertest')
-const app = require('../app')
+const app = require('../server')
 
 describe('Login API /post', () => { 
+    afterAll(async () => {
+        await app.close(); // Close the server after all tests are done
+    });
+
     test('login with valid credentials', async () => {
         const res = await request(app)
             .post('/login')

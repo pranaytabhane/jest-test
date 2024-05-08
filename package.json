@@ -4,12 +4,12 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node http/server.js",
     "test": "jest",
     "test:fetchdata": "jest --testPathPattern=test/fetchdata.test.js",
     "test:login": "jest --detectOpenHandles --testPathPattern=test/login.test.js",
     "test:execution-cycle": "jest --detectOpenHandles --testPathPattern=test/execution-cycle.test.js",
-    "test:lifecycle": "jest --detectOpenHandles --testPathPattern=test/lifecycle.test.js"
+    "test:lifecycle": "jest --detectOpenHandles --testPathPattern=test/lifecycle.test.js",
+    "test:server-config": "jest --detectOpenHandles --testPathPattern=test/server.test.js"
   },
   "keywords": [],
   "author": "",

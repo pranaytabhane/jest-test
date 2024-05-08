@@ -1,9 +1,8 @@
 const express = require('express')
-const app = express()
 
-app.use(express.json())
+const router = express.Router()
 
-app.post('/login', function(req, res) {
+router.post('/login', function(req, res) {
     const { username, password } = req.body;
     // Check if username and password are valid (dummy example)
     if (username === 'user' && password === 'password') {
@@ -15,9 +14,4 @@ app.post('/login', function(req, res) {
     }
 })
 
-// Middleware to handle not found URLs
-app.use(function(req, res, next) {
-    res.status(404).send("Sorry, the requested resource was not found.");
-});
-
-module.exports = app;
+module.exports = router
